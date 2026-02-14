@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Ti 💖</title>
+<style>
+/*  body  */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    overflow-x: hidden;
+
+}
+
+/*  ASCII  */
+.border {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.heart {
+    font-family: monospace;
+    color: #ff1493;
+    white-space: pre;
+    opacity: 0;
+    animation: fadeHeart 8s ease-in-out infinite;
+}
+
+@keyframes fadeHeart {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    25% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.02);
+    }
+    75% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+/*  CONTENIDO  */
+.main {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #ffffffcc;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.texto-largo {
+    text-align: justify;
+    font-size: 18px;
+    color: #c71585;
+}
+
+/*  MEDIA  */
+.media {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px dashed #ff69b4;
+    border-radius: 15px;
+    color: #ff1493;
+}
+
+/*  BOTONES  */
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.yes {
+    background: #ff69b4;
+    color: white;
+}
+
+.no {
+    background: #ccc;
+}
+
+/* PAGINAS */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<!--  BORDE DE CORAZONES  -->
+<div class="border">
+    <script>
+        for(let i=0;i<144;i++){
+            document.write(`<div class="heart">
+ +++  +++
+++++++++++
+++++++++++
+ ++++++++
+  ++++++
+   ++++
+    ++
+</div>`);
+        }
+    </script>
+</div>
+
+<!-- PAGINA PRINCIPAL -->
+
+<div class="main page active" id="home">
+</pre>
+ <h1></h1>Haz click para activar la música c; </h1>
+    <div class="texto-largo">
+        Hola amor mío, feliz día de san valentín :3, quería empezar agradeciendo
+        todo el amor incondicional que me has dado todo estos 512 días,
+         (si es que estas viendo esto en 14 de febrero).
+        Hace un año me diste un cd me regalaste un disco con 23 canciones muy bellas
+        y todas representaban una idea o un sentimiento que tenías de mi,
+        aunque quizá cuando lo estabas haciendo algunas cosas que pensabas de mí cambiaron,
+        escucho esas canciones y me hacen querer ser un mejor hombre, un mejor novio,
+        un mejor amigo, pues mereces eso, la verdad es que soy muy inseguro, paranoico,
+        impulsivo, desorganizado, flojo, ausente mentalmente en veces, ansioso, introvertido,
+        penoso, etc, etc... contigo, parece que casí todo lo que no me gusta de mí
+        desaparece,
+        aún me faltan demasiadas cosas por mejorar, pero de verdad, de verdad, de verdad,
+        no puedo imaginarme un futuro sin ti :c, te necesito en mi vida, pues eres mi gasolina,
+        mi motor, mi corazon y mi sangre, sueño en un futuro en donde los dos estemos abrazados en nuestro sofá
+        viendo todas las peliculas que juramos desear ver, con nuestro gato al lado, aún nos falta
+        demasiado por que recorrer, pero te juro que nunca te abandonaré, nunca te volveré a hacer eso otra vez,
+        mejoraré, seré mejor y estaré contigo toda mi eternidad, perdon si soy muy redundante en eso, la verdad
+        no soy bueno escribiendo, creo que lo sabes xdd :,v todo esto te lo digo desde mi corazon y mente,
+        que aunque desorganizado esté, estoy muy seguro de que eres el amor de mi vida Abigail.
+        No te preocupes si es que envejecemos, amaré cada arruga, cada pliegue y cada cana de ti,
+        moriremos y nos enterrarán a lado nuestro, y ahí nos pudriremos y la composta se mezclará,
+        y de ello crecerán bellas flores que serán hogar de abejas y mariposas y moriremos otra vez,
+        y volveremos a vivir, así por toda la eternidad,
+
+        Por cierto dale hasta abajo para ver la pregunta :3
+
+    </div>
+
+    <!-- ===== IMAGEN / VIDEO ===== -->
+ <div class="media">
+    <img src="IMG_20251203_164425_605.jpg" style="max-width:100%; border-radius:15px;">
+</div>
+
+
+        <!-- PARA IMAGEN -->
+        <!-- <img src="imagen.jpg" style="max-width:100%; border-radius:15px;"> -->
+
+        <!-- PARA VIDEO -->
+        <!--
+        <video controls style="max-width:100%; border-radius:15px;">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        -->
+    </div>
+
+    <p style="font-size:20px; color:#b03060;">
+        ¿Te gustaría pasar toda tu vida, tu muerte y tu descomposición conmigo? 
+    </p>
+
+
+    <div class="buttons">
+        <button class="Sí" onclick="goYes()">Sí</button>
+        <button class="No" onclick="goNo()">No</button>
+    </div>
+</div>
+
+<!-- ==================== PAGINA SI ==================== -->
+<div class="main page" id="yesPage">
+<!-- ===== GIF ===== -->
+    <video autoplay loop muted style="max-width:300px; border-radius:20px;">
+        <source src="VID20260110173345.mp4" type="video/mp4">
+    </video><br><br>
+
+    <div class="texto-largo">
+        Pues entonces que así sea, que nos veamos los días que podamos
+        para un futuro en el que nos veamos todos los días,
+        que nos escuchemos unos cuantos días a la semana
+        para hacerlo cada mañana con unos buenos días,
+        que nos ayudemos en lo que no sabemos, 
+        solo para apoyar al otro,
+        te amo en todas mis vidas Abigail, o como sea que te llames en la otra y en la otra y en las pasadas,
+        y cuando muramos prometo de alguna manera encontrarte y agarrar lo que solían ser tu manos de monquiqui
+        aunque nuestras almas estén juntas, haré todo lo que pueda natural y físicamente para 
+        estar a tu lado por siempre.
+        y sabes que siempre tambien es hoy,
+        te prometo un futuro lleno de amor, comprehension y fidelidad,
+        así como un igual presente.
+
+
+        Te amo mi corazoncito de melon, mi nubesita, mi monquiqui, mi ciervito, mis ojos de muñequita de porcelana.
+        Ojalá y descanses y sueñes bonito ahorita que es de noche,
+        que supongo que es la hora en que estas leyendo esto,
+        te amo te amo te amoooooooo.
+        (reinicia la pagina para irte a la principal :3)
+    </div>
+</div>
+
+<!-- ==================== PAGINA NO ==================== -->
+<div class="main page" id="noPage">
+    <h1>pues q mal lol ahi t va la pagina del si</h1>
+</div>
+
+<script>
+function goYes(){
+    changePage("yesPage");
+}
+
+function goNo(){
+    changePage("noPage");
+    setTimeout(() => {
+        changePage("yesPage");
+    }, 3000);
+}
+
+function changePage(id){
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+<audio id="bgMusic" loop>
+    <source src="Taylor Swift invisible string (Official Lyric Video).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+    if (music.paused) {
+        music.play();
+    }
+}, { once: true });
+</script>
+</body>
+</html>
